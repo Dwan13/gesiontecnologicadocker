@@ -1,0 +1,8 @@
+version: '3'
+services:
+  web:
+    image: "gestion"
+  django:
+    image: "gestiondjango"
+  postgrest:
+    image: "gestionpostgres"
