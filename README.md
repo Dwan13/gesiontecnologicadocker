@@ -9,9 +9,9 @@
 Descargamos la imagen con `docker pull docker pull jenkins/jenkins`
 #### Paso 2
 Creamos un arhivo docker-compose-yaml donde se incluye:
-*los servicios que son jenkins
-*pueros
-*volumenes
+* los servicios que son jenkins
+* pueros
+* volumenes
 
 #### Paso 3
 Creamos el contenedor mediante `docker-compose up`
