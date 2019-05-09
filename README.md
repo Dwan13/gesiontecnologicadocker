@@ -1,4 +1,4 @@
-# Jenkins y Django
+# Openproject y nginx
 
 ## Integrantes
 
@@ -6,11 +6,12 @@
 ### Ivan Rene Arevalo Rios
 
 #### Paso 1
-Descargamos la imagen con `docker pull docker pull jenkins/jenkins`
+Descargamos la imagen con `docker pull openproject/community`
+
 #### Paso 2
 Creamos un arhivo docker-compose-yaml donde se incluye:
-* los servicios que son jenkins
-* pueros
+* los servicios que son openproject y nginx
+* puertos
 * volumenes
 
 #### Paso 3
