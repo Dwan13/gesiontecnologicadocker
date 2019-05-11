@@ -6,12 +6,22 @@ services:
       - ./pgdata:/var/lib/postgresql/9.4/main
       - ./logs:/var/log/supervisor
       - ./static:/var/db/openproject
+    ports:
+      - 8080:80
+    environment:
+      - SECRET_KEY_BASE=secret      
+      - EMAIL_DELIVERY_METHOD="smtp"
+      - SMTP_ADDRESS="smtp.mailgun.org"
+      - SMTP_PORT="587"
+      - SMTP_DOMAIN="myDomain.com"
+      - SMTP_AUTHENTICATION="plain"
+      - SMTP_USER_NAME="Dwan13"
+      - SMTP_PASSWORD="gestiontecnologica"
+      - SMTP_ENABLE_STARTTLS_AUTO="true"
   web:
     image: nginx
     volumes:
       - ./mysite.template:/etc/nginx/conf.d/mysite.template
-    ports:
-      - 8080:80
     environment:
       - NGINX_HOST=foobar.com
       - NGINX_PORT=80
